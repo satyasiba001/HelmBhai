@@ -14,19 +14,19 @@ To deploy NGINX, we will use the Bitnami Helm chart.
 
 1. **search for charts in the Artifact Hub or your own hub instance**
 
-```bash
-helm search hub nginx
-```
+   ```bash
+   helm search hub nginx
+   ```
 2. **To get all information about the chart**
 
-```bash
-helm show all bitnami/nginx
-```
+   ```bash
+   helm show all bitnami/nginx
+   ```
 3. **you can add a chart repository. Check [Artifact Hub](https://artifacthub.io/packages/search?kind=0) for available Helm chart repositories.**
 
-```bash
-helm repo add bitnami https://charts.bitnami.com/bitnami
-```
+   ```bash
+   helm repo add bitnami https://charts.bitnami.com/bitnami
+   ```
 
 4. **Add the Bitnami repository:**
 
