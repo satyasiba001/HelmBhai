@@ -12,20 +12,36 @@
 
 To deploy NGINX, we will use the Bitnami Helm chart.
 
-1. **Add the Bitnami repository:**
+1. **search for charts in the Artifact Hub or your own hub instance**
+
+```bash
+helm search hub nginx
+```
+2. **To get all information about the chart**
+
+```bash
+helm show all bitnami/nginx
+```
+3. **you can add a chart repository. Check [Artifact Hub](https://artifacthub.io/packages/search?kind=0) for available Helm chart repositories.**
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+4. **Add the Bitnami repository:**
 
    ```bash
    helm repo add bitnami https://charts.bitnami.com/bitnami
    helm repo update
    ```
 
-2. **Install the NGINX Helm chart:**
+5. **Install the NGINX Helm chart:**
 
    ```bash
    helm install my-nginx bitnami/nginx
    ```
 
-3. **Verify the installation:**
+6. **Verify the installation:**
 
    ```bash
    helm list
@@ -83,6 +99,14 @@ To remove the NGINX release from the cluster:
    helm list
    kubectl get pods
    ```
+
+Want to uninstall a chart but release history will be kept
+
+```bash
+helm uninstall mysql-1612624192 --keep-history
+```
+
+Helm tracks your releases even after you've uninstalled them, you can audit a cluster's history, and even undelete a release (with `helm rollback`)
 
 ---
 
