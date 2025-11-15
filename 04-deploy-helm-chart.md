@@ -17,22 +17,21 @@ To deploy NGINX, we will use the Bitnami Helm chart.
    ```bash
    helm search hub nginx
    ```
-2. **To get all information about the chart**
-
+2. **see which charts are installed**
    ```bash
-   helm show all bitnami/nginx
+   helm repo ls -A
    ```
+
 3. **you can add a chart repository. Check [Artifact Hub](https://artifacthub.io/packages/search?kind=0) for available Helm chart repositories.**
 
    ```bash
    helm repo add bitnami https://charts.bitnami.com/bitnami
+   helm repo udpate
    ```
-
-4. **Add the Bitnami repository:**
+4. **To get all information about the chart**
 
    ```bash
-   helm repo add bitnami https://charts.bitnami.com/bitnami
-   helm repo update
+   helm show all bitnami/nginx
    ```
 
 5. **Install the NGINX Helm chart:**
